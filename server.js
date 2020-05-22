@@ -65,7 +65,7 @@ function getEvents(req, res) {
     firestore.collection("Events").get()
         .then((snapshot) => {
             if (!snapshot.empty) {
-                // const ret = { events: []};
+                 const ret = { };
                 snapshot.docs.forEach(element => {
                     ret.events.push(element.data());
                 }, this);
